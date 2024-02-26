@@ -49,7 +49,7 @@ export const CardProds = ({ data }) => {
             {quantityPerItem > 0 && (
                 <div>{quantityPerItem}</div>
             )}
-            <p>lala{data.title}</p>
+            <p>lolo{data.title}</p>
             <img alt={data.title} src={data.image} />
             <p>${data.price}</p>
             {quantityPerItem === 0 ? (
