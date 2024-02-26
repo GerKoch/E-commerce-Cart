@@ -1,0 +1,26 @@
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(158, 166, 15, 0.815);
+    padding: 0.5rem;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.5);
+}
+
+.navStyles{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    margin-left: 10rem;
+}
+
+.cartCount {
+    background-color: grey;
+    border-radius: 20px;
+    padding: 8px;
+}
