@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./CartCard.css";
 import { cartContext } from "../contexts/ShoppingCartContext";
+import { Button } from "../Button/Button";
 
 export const CartCard = ({ dataCart }) => {
     const [cart, setCart] = useContext(cartContext);
@@ -53,18 +54,18 @@ export const CartCard = ({ dataCart }) => {
             <img alt={dataCart.data.title} src={dataCart.data.image} />
             <p>${dataCart.data.price}</p>
             {quantityPerItem === 0 ? (
-                <button onClick={() => addToCart()}>
+                <Button onClick={() => addToCart()}>
                     Add to cart
-                </button>
+                </Button>
             ) : (
-                <button onClick={() => addToCart()}>
+                <Button onClick={() => addToCart()}>
                     + add more
-                </button>
+                </Button>
             )}
             {quantityPerItem > 0 && (
-                <button onClick={() => removeItem(dataCart.data.id)}>
+                <Button onClick={() => removeItem(dataCart.data.id)}>
                     subtract item
-                </button>
+                </Button>
             )}
         </div>
     )

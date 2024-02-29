@@ -5,11 +5,11 @@
 
 .containerInput {
     display: flex;
-    background-color: black;
+    background-color:rgba(204, 211, 54, 0.815);
     height: 50px;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 1px;
     box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.3);
     z-index: 3;
     position: relative;

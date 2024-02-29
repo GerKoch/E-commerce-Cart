@@ -15,10 +15,8 @@ export const Navbar = () => {
             <Link to={"/"} className="navStyles">
                 <h1 className="title">Store</h1>
             </Link>
-            <Link to={"/cart"}>
-                <li>
+            <Link to={"/cart"} className="cart">
                     Cart Items: <span className="cartCount">{quant}</span>
-                </li>
             </Link>
 
         </nav>
