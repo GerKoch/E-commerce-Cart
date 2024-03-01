@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(158, 166, 15, 0.815);
+    background-color: rgba(211, 221, 28, 0.815);
     padding: 0.5rem;
-    box-shadow: 1px 2px 5px rgb(0, 0, 0, 0.5);
 }
 
 .navStyles{
@@ -19,8 +18,17 @@
     margin-left: 10rem;
 }
 
+.cart {
+    color: black;
+    margin-right: 10rem;
+    text-decoration: none;
+    background-color: rgb(204, 202, 68);
+    border-radius: 50px;
+    padding: 10px;
+}
+
 .cartCount {
-    background-color: grey;
     border-radius: 20px;
     padding: 8px;
+    color: black;
 }
