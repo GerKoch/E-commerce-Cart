@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { cartContext } from "../contexts/ShoppingCartContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import "boxicons";
 
 export const Navbar = () => {
     const [cart, setCart] = useContext(cartContext);
@@ -16,7 +17,8 @@ export const Navbar = () => {
                 <h1 className="title">Store</h1>
             </Link>
             <Link to={"/cart"} className="cart">
-                    Cart Items: <span className="cartCount">{quant}</span>
+                <box-icon name='cart' className="cartIcon" ></box-icon>
+                <span className="cartCount">{quant}</span>  
             </Link>
 
         </nav>
