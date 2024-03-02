@@ -48,7 +48,7 @@ export const CartCard = ({ dataCart }) => {
     return (
         <div className="container">
             {quantityPerItem > 0 && (
-                <div>{quantityPerItem}</div>
+                <div className="cantProds">{quantityPerItem}</div>
             )}
             <p>{dataCart.data.title}</p>
             <img alt={dataCart.data.title} src={dataCart.data.image} />
