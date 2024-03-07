@@ -34,3 +34,9 @@
     justify-content: center;
 }
 
+.buttonQuantityContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+

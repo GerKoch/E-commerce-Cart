@@ -50,9 +50,8 @@ export const CartCard = ({ dataCart }) => {
                 <img alt={dataCart.data.title} src={dataCart.data.image} />
                 <p>{dataCart.data.title}</p>
                 {quantityPerItem > 0 && (
-                    <Button onClick={() => removeItem(dataCart.data.id)}>
-                        -
-                    </Button>
+                    <Button onClick={() => removeItem(dataCart.data.id)} text='-'/>
+
                 )}
                 {quantityPerItem > 0 && (
                     <div className="cantProds">{quantityPerItem}</div>
