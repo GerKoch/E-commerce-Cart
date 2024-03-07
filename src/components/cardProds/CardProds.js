@@ -46,27 +46,31 @@ export const CardProds = ({ data }) => {
     const quantityPerItem = getQuantityById(data.id);
 
     return (
-        <div className="container">
-            {quantityPerItem > 0 && (
-                <div className="cantProds">{quantityPerItem}</div>
-            )}
-            <p>{data.title}</p>
-            <img alt={data.title} src={data.image} />
-            <p>${data.price}</p>
-            {quantityPerItem === 0 ? (
-                <Button onClick={() => addToCart()}>
-                    Add to cart
-                </Button>
-            ) : (
-                <Button onClick={() => addToCart()}>
-                    + add more
-                </Button>
-            )}
-            {quantityPerItem > 0 && (
-                <Button onClick={() => removeItem(data.id)}>
-                    subtract item
-                </Button>
-            )}
+        <div>
+            <div className="container">
+                <p>{data.title}</p>
+                <img alt={data.title} src={data.image} />
+                <div className="bubble">
+                    <p>${data.price}</p>
+                    {quantityPerItem > 0 && (
+                        <div className="cantProds">{quantityPerItem}</div>
+                    )}
+                </div>
+                {quantityPerItem === 0 ? (
+                    <Button onClick={() => addToCart()}>
+                        Add to cart
+                    </Button>
+                ) : (
+                    <Button onClick={() => addToCart()}>
+                        + add more
+                    </Button>
+                )}
+                {quantityPerItem > 0 && (
+                    <Button onClick={() => removeItem(data.id)}>
+                        subtract item
+                    </Button>
+                )}
+            </div>
         </div>
     )
 }

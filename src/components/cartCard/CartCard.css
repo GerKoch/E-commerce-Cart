@@ -1,1 +1,42 @@
+.cartContainer {
+    background-color: aqua;
+}
+
+.cartContainer {
+    display: flex;
+    width: 750px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 40px 10px 10px 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2 ease;
+}
+
+.cartContainer:hover {
+    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.2) ;
+}
+
+.cartContainer > img {
+    width: 64px;
+    height: 64px;
+    margin: 10px 10px 10px 100px;
+}
+
+.cartContainer > p {
+    margin: 10px 15px;
+}
+
+.cantProds {
+    display: flex;
+    color: black;
+    background-color: rgb(204, 202, 68);
+    border-radius: 100px;
+    padding: 10px 10px;
+    margin: 10px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+}
 

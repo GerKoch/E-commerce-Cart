@@ -1,6 +1,13 @@
+.centerProds {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 242, 242);
+}
+
 .prods {
     column-count: 3;
     background-color: rgb(245, 242, 242);
+    
 }
 
 .containerInput {

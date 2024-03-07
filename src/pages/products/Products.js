@@ -53,16 +53,18 @@ export const Products = () => {
                     />
                 </div>
             </div>
-            <div className="prods">
-                {loading && <p>loading...</p>}
-                {showProds.length > 0 &&
-                    !loading &&
-                    showProds.map(res =>
-                        <CardProds
-                            key={res.id}
-                            data={res}
-                        />
-                    )}
+            <div className="centerProds">
+                <div className="prods">
+                    {loading && <p>loading...</p>}
+                    {showProds.length > 0 &&
+                        !loading &&
+                        showProds.map(res =>
+                            <CardProds
+                                key={res.id}
+                                data={res}
+                            />
+                        )}
+                </div>
             </div>
         </div>
     )

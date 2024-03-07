@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { cartContext } from "../contexts/ShoppingCartContext"
 import { CartCard } from "../cartCard/CartCard";
+import "./ShoppingCart.css";
 
 export const ShoppingCart = () => {
     const [cart, setCart] = useContext(cartContext);
@@ -15,19 +16,21 @@ export const ShoppingCart = () => {
 
     console.log("Cart:", cart);
     return (
-        <div>
-            <div>
-                <div>Items in cart: {quantity}</div>
-                <div>Total: ${totalPrice}</div>
-        
-            </div>
-            <div>
-                {cart.map(resp => 
-                    <CartCard
-                        key={resp.title}
-                        dataCart={resp}
-                    />  
-                )}
+        <div className="containerCartCenter">
+            <div className="cardCartContainerCenter">
+                <div className="cardCartContainer">
+                    {cart.map(resp =>
+                        <CartCard
+                            key={resp.title}
+                            dataCart={resp}
+                        />
+                    )}
+                </div>
+                <div className="cardCartTotal">
+                    <div>Items in cart: {quantity}</div>
+                    <div>Total: ${totalPrice}</div>
+
+                </div>
             </div>
         </div>
     )
