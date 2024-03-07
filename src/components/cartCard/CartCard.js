@@ -29,7 +29,7 @@ export const CartCard = ({ dataCart }) => {
                 return currItem.filter((item) => item.data.id !== dataCart.data.id);
             } else {
                 return currItem.map((item) => {
-                    if (item.data.id ===dataCart.data.id) {
+                    if (item.data.id === dataCart.data.id) {
                         return { ...item, quantity: item.quantity - 1 };
                     } else {
                         return item;
@@ -46,27 +46,23 @@ export const CartCard = ({ dataCart }) => {
     const quantityPerItem = getQuantityById(dataCart.data.id);
 
     return (
-        <div className="container">
-            {quantityPerItem > 0 && (
-                <div className="cantProds">{quantityPerItem}</div>
-            )}
-            <p>{dataCart.data.title}</p>
-            <img alt={dataCart.data.title} src={dataCart.data.image} />
-            <p>${dataCart.data.price}</p>
-            {quantityPerItem === 0 ? (
-                <Button onClick={() => addToCart()}>
-                    Add to cart
-                </Button>
-            ) : (
-                <Button onClick={() => addToCart()}>
-                    + add more
-                </Button>
-            )}
-            {quantityPerItem > 0 && (
-                <Button onClick={() => removeItem(dataCart.data.id)}>
-                    subtract item
-                </Button>
-            )}
-        </div>
+            <div className="cartContainer">
+                <img alt={dataCart.data.title} src={dataCart.data.image} />
+                <p>{dataCart.data.title}</p>
+                {quantityPerItem > 0 && (
+                    <Button onClick={() => removeItem(dataCart.data.id)}>
+                        -
+                    </Button>
+                )}
+                {quantityPerItem > 0 && (
+                    <div className="cantProds">{quantityPerItem}</div>
+                )}
+                {quantityPerItem > 0 && (
+                    <Button onClick={() => addToCart()}>
+                        +
+                    </Button>
+                )}
+                <p>${dataCart.data.price}</p>
+            </div>
     )
 }

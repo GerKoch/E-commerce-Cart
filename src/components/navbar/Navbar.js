@@ -20,7 +20,6 @@ export const Navbar = () => {
                 <box-icon name='cart' className="cartIcon" ></box-icon>
                 <span className="cartCount">{quant}</span>  
             </Link>
-
         </nav>
     )
 }
