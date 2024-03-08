@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { cartContext } from "../contexts/ShoppingCartContext";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 import "boxicons";
 
 export const Navbar = () => {
