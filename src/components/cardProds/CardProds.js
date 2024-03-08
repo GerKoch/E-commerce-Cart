@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./CardProds.css";
 import { cartContext } from "../contexts/ShoppingCartContext";
 import { Button } from "../Button/Button";
+import "boxicons";
 
 export const CardProds = ({ data }) => {
     const [cart, setCart] = useContext(cartContext);
@@ -23,7 +24,7 @@ export const CardProds = ({ data }) => {
         });
     };
 
-    const removeItem = (id) => {
+    const removeItem = () => {
         setCart((currItem) => {
             if (currItem.find((item) => item.data.id === data.id)?.quantity === 1) {
                 return currItem.filter((item) => item.data.id !== data.id);
@@ -50,26 +51,19 @@ export const CardProds = ({ data }) => {
             <div className="container">
                 <p>{data.title}</p>
                 <img alt={data.title} src={data.image} />
+                <box-icon name='heart' className="cardHeart"></box-icon>
                 <div className="bubble">
                     <p>${data.price}</p>
-                    {quantityPerItem > 0 && (
-                        <div className="cantProds">{quantityPerItem}</div>
-                    )}
                 </div>
-                {quantityPerItem === 0 ? (
-                    <Button onClick={() => addToCart()}>
-                        Add to cart
-                    </Button>
-                ) : (
-                    <Button onClick={() => addToCart()}>
-                        + add more
-                    </Button>
-                )}
-                {quantityPerItem > 0 && (
-                    <Button onClick={() => removeItem(data.id)}>
-                        subtract item
-                    </Button>
-                )}
+                <div className="buttonQuantityContainer">
+                        {quantityPerItem > 0 && (
+                            <Button onClick={() => removeItem()} text='-' />
+                        )}
+                        {quantityPerItem > 0 && (
+                            <div className="cantProds">{quantityPerItem}</div>
+                        )}
+                        <Button onClick={() => addToCart()} text='+' />
+                    </div>
             </div>
         </div>
     )

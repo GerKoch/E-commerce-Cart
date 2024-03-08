@@ -34,3 +34,12 @@
     justify-content: center;
 }
 
+.cardHeart {
+    background-color: aqua;
+}
+
+.buttonQuantityContainer {
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+}
