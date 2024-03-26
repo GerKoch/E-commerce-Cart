@@ -3,7 +3,7 @@ import "./CartCard.css";
 import { cartContext } from "../contexts/ShoppingCartContext";
 import { Button } from "../Button/Button";
 
-export const CartCard = ({ dataCart }) => {
+export const CartCard = ({ dataCart }) => { 
     const [cart, setCart] = useContext(cartContext);
 
     const addToCart = () => {

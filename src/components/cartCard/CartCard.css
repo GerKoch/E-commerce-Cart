@@ -1,16 +1,11 @@
 .cartContainer {
-    background-color: aqua;
-}
-
-.cartContainer {
     display: flex;
     width: 750px;
     border-radius: 5px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    margin: 40px 10px 10px 10px;
-    cursor: pointer;
+    margin: 10px 10px 10px 10px;
     transition: box-shadow 0.2 ease;
 }
 
