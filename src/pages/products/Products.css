@@ -5,7 +5,8 @@
 }
 
 .prods {
-    column-count: 3;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     background-color: rgb(245, 242, 242);
     
 }
